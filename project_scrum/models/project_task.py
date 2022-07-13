@@ -83,7 +83,7 @@ class ProjectTask(models.Model):
     value = fields.Selection("_get_value_field")
     risk = fields.Selection("_get_risk_field")
     kano = fields.Selection("_get_kano_field")
-    color = fields.Integer(related="project_id.color")
+    #color = fields.Integer(related="project_id.color")
 
     @api.depends("sprint_id")
     def _compute_current_sprint(self):
